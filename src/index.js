@@ -16,6 +16,7 @@ const __dirname = dirname(__filename);
 let loop = new Date(startDate);
 let holidayData = [];
 while (loop <= endDate) {
+  // Получить URLs для выбранных дат
   const urlsData = getUrls(loop, COUNT_REQUEST, endDate);
   try {
     const promisesOfHolidays = await Promise.all(
